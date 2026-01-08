@@ -16,11 +16,21 @@ function HomePage() {
 	{ name: 'Terminale Compl.', color: '#607D8B', topics: ['Limites', 'Intégrales', 'Complexes'] },
   ];
 
+  const gradeToLessonMap = {
+    '4ème': '/lessons/pythagore',
+    '3ème': '/lessons/thales', 
+    '1ère Spé': '/lessons/derivation',  
+    'Terminale': '/lessons/pythagore',  // Peut être changé plus tard
+    '2nde': '/lessons/thales',          // Peut être changé plus tard
+    // Ajoutez d'autres niveaux au fur et à mesure
+  };
+
+  // MODIFIEZ la fonction handleGradeClick :
   const handleGradeClick = (gradeName) => {
-    if (gradeName === '4ème') {
-      navigate('/lessons/pythagore');
-    } else if (gradeName === '3ème') {
-      navigate('/lessons/thales');
+    const lessonPath = gradeToLessonMap[gradeName];
+  
+    if (lessonPath) {
+      navigate(lessonPath);
     } else {
       alert(`Niveau ${gradeName} sélectionné ! Bientôt disponible 🚀`);
     }
