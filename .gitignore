@@ -25,3 +25,17 @@ yarn-error.log*
 
 # OS
 Thumbs.db
+
+
+echo "# Dependencies" > .gitignore
+echo "/node_modules" >> .gitignore
+echo "/.pnp" >> .gitignore
+echo ".pnp.js" >> .gitignore
+echo "" >> .gitignore
+echo "# Production" >> .gitignore
+echo "/build" >> .gitignore
+echo "" >> .gitignore
+echo "# Misc" >> .gitignore
+echo ".DS_Store" >> .gitignore
+echo ".env.local" >> .gitignore
+echo "npm-debug.log*" >> .gitignore
