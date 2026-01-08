@@ -19,7 +19,7 @@ function HomePage() {
   const gradeToLessonMap = {
     '4ème': '/lessons/pythagore',
     '3ème': '/lessons/thales', 
-    '1ère Spé': '/lessons/derivation',  
+    '1ère Spé': '/premiere', 
     'Terminale': '/lessons/pythagore',  // Peut être changé plus tard
     '2nde': '/lessons/thales',          // Peut être changé plus tard
     // Ajoutez d'autres niveaux au fur et à mesure

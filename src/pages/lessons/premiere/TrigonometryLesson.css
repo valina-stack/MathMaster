@@ -1,0 +1,22 @@
+.trigonometry-lesson {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trigonometry-table {
+  margin: 20px 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.trigonometry-table th, .trigonometry-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.trigonometry-table th {
+  background-color: #4CAF50;
+  color: white;
+}

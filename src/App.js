@@ -6,8 +6,10 @@ import HomePage from './pages/HomePage';
 import PythagoreLesson from './pages/lessons/PythagoreLesson';
 import ThalesLesson from './pages/lessons/ThalesLesson';
 import DerivationLesson from './pages/lessons/premiere/DerivationLesson'; // <-- AJOUTEZ CETTE LIGNE
+import TrigonometryLesson from './pages/lessons/premiere/TrigonometryLesson';
 import ProgressPage from './pages/ProgressPage';
 import ExercisesPage from './pages/ExercisesPage';
+import PremiereMenu from './pages/PremiereMenu';
 import './App.css';
 
 function App() {
@@ -20,7 +22,10 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/lessons/pythagore" element={<PythagoreLesson />} />
             <Route path="/lessons/thales" element={<ThalesLesson />} />
-            <Route path="/lessons/derivation" element={<DerivationLesson />} /> {/* <-- AJOUTEZ CETTE ROUTE */}
+            <Route path="/lessons/derivation" element={<DerivationLesson />} />
+            <Route path="/lessons/trigonometry" element={<TrigonometryLesson />} />
+            {/* AJOUTEZ CETTE LIGNE : */}
+            <Route path="/cours/premiere" element={<PremiereMenu />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/exercises" element={<ExercisesPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
