@@ -11,8 +11,9 @@ function HomePage() {
     { name: '4ème', color: '#9C27B0', topics: ['Puissances', 'Pythagore', 'Calcul'] },
     { name: '3ème', color: '#FF9800', topics: ['Thalès', 'Trigonométrie', 'Probabilités'] },
     { name: '2nde', color: '#F44336', topics: ['Fonctions', 'Vecteurs', 'Statistiques'] },
-    { name: '1ère', color: '#3F51B5', topics: ['Dérivation', 'Suites', 'Probabilités'] },
-    { name: 'Terminale', color: '#607D8B', topics: ['Limites', 'Intégrales', 'Complexes'] },
+    { name: '1ère Spe', color: '#3F51B5', topics: ['Dérivation', 'Suites', 'Probabilités'] },
+    { name: 'Terminale Expert', color: '#607D8B', topics: ['Limites', 'Intégrales', 'Complexes'] },
+	{ name: 'Terminale Compl.', color: '#607D8B', topics: ['Limites', 'Intégrales', 'Complexes'] },
   ];
 
   const handleGradeClick = (gradeName) => {
@@ -38,20 +39,6 @@ function HomePage() {
         <div className="hero-content">
           <h2>Apprends les maths de façon interactive</h2>
           <p>Cours adaptés, exercices corrigés, progression suivie</p>
-          <div className="hero-buttons">
-            <button 
-              className="demo-button primary"
-              onClick={() => navigate('/lessons/pythagore')}
-            >
-              📐 Découvrir Pythagore
-            </button>
-            <button 
-              className="demo-button secondary"
-              onClick={() => navigate('/lessons/thales')}
-            >
-              📏 Explorer Thalès
-            </button>
-          </div>
         </div>
       </section>
 
@@ -169,50 +156,8 @@ function HomePage() {
       <section className="cta-section">
         <h2>🚀 Prêt à maîtriser les maths ?</h2>
         <p>Rejoins des milliers d'élèves qui améliorent leurs résultats avec MathMaster</p>
-        <div className="cta-buttons">
-          <button 
-            className="cta-button primary"
-            onClick={() => navigate('/lessons/pythagore')}
-          >
-            📐 Commencer avec Pythagore
-          </button>
-          <button 
-            className="cta-button secondary"
-            onClick={() => navigate('/lessons/thales')}
-          >
-            📏 Découvrir Thalès
-          </button>
-        </div>
       </section>
 
-      {/* Section Première */}
-      <section className="premiere-section">
-        <h2>🎯 Première - Spécialité Mathématiques</h2>
-        <p className="premiere-subtitle">
-          Programme complet de Première avec exercices interactifs et quiz
-        </p>
-  
-        <div className="premiere-grid">
-          <div className="premiere-card" onClick={() => navigate('/lessons/derivation')}>
-            <span className="premiere-card-icon">📈</span>
-            <h3 className="premiere-card-title">Dérivation</h3>
-            <p className="premiere-card-desc">
-              Nombre dérivé, équation de tangente, étude des variations de fonctions.
-            </p>
-            <div className="premiere-card-meta">
-              <span className="premiere-meta-item">⏱️ 75 min</span>
-              <span className="premiere-meta-item">🎯 Avancé</span>
-              <span className="premiere-meta-item">✏️ 5 exercices</span>
-            </div>
-            <button className="premiere-start-button">
-              Commencer la leçon
-            </button>
-          </div>
-    
-          {/* Ajoutez d'autres cartes ici */}
-        </div>
-      </section>
-	  
       {/* Footer */}
       <footer className="app-footer">
         <p>© 2024 MathMaster - Application éducative de mathématiques</p>
