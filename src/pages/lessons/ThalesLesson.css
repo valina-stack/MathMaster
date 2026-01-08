@@ -1,0 +1,385 @@
+/* ThalesLesson.css - Styles spécifiques pour la leçon Thalès */
+
+.thales-lesson {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+}
+
+/* Header spécifique Thalès */
+.lesson-header {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(33, 150, 243, 0.2);
+}
+
+.grade-badge {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+}
+
+.progress-score {
+  background: rgba(255, 215, 0, 0.2);
+  padding: 8px 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: #FFD700;
+  font-weight: 600;
+}
+
+/* Diagramme Thalès */
+.diagram-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 25px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #2196F3;
+}
+
+.thales-diagram {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 30px auto;
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+}
+
+.intersecting-lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+}
+
+.line-d {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #2196F3;
+  transform: rotate(30deg);
+  transform-origin: center;
+  top: 50%;
+}
+
+.line-d-prime {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #2196F3;
+  transform: rotate(-30deg);
+  transform-origin: center;
+  top: 50%;
+}
+
+.point-a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: #2196F3;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #2196F3;
+}
+
+.parallel-lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+}
+
+.line-bc {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #4CAF50;
+  transform: rotate(0deg);
+  transform-origin: center;
+  top: 30%;
+}
+
+.line-bc-prime {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #4CAF50;
+  transform: rotate(0deg);
+  transform-origin: center;
+  top: 70%;
+}
+
+[class^="point-"] {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid #666;
+  font-size: 0.8rem;
+}
+
+.point-b {
+  top: 30%;
+  left: 30%;
+}
+
+.point-c {
+  top: 30%;
+  right: 30%;
+}
+
+.point-b-prime {
+  top: 70%;
+  left: 30%;
+}
+
+.point-c-prime {
+  top: 70%;
+  right: 30%;
+}
+
+.labels {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.label-parallel {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.diagram-explanation {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Formules spécifiques Thalès */
+.formula-box {
+  background: linear-gradient(135deg, #f0f7ff, #e3f2fd);
+  border-left: 5px solid #2196F3;
+}
+
+.formula {
+  font-family: 'Cambria Math', 'Latin Modern Math', serif;
+  font-size: 2.2rem;
+  color: #2196F3;
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin: 15px 0;
+  border: 2px dashed #2196F3;
+}
+
+/* Quiz spécifique */
+.quiz-question {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #2196F3;
+}
+
+.quiz-feedback {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.correct-feedback {
+  background: #e8f5e9;
+  color: #4CAF50;
+  border-left: 5px solid #4CAF50;
+}
+
+.incorrect-feedback {
+  background: #ffebee;
+  color: #F44336;
+  border-left: 5px solid #F44336;
+}
+
+.explanation-detail {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Résultats du quiz */
+.score-display-large {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.score-total {
+  font-size: 3rem;
+  color: #2196F3;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.score-percentage {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.lesson-completion {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.completion-message {
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.completion-message.success {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+}
+
+.completion-message.info {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  color: white;
+  box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
+}
+
+.results-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.retry-button, .continue-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-button {
+  background: #f8f9fa;
+  color: #333;
+  border: 2px solid #e0e0e0;
+}
+
+.continue-button {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+}
+
+.retry-button:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.continue-button:hover {
+  background: linear-gradient(135deg, #3d8b40, #1b5e20);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* Footer spécifique */
+.lesson-footer {
+  background: #2c3e50;
+}
+
+/* Animations spécifiques */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .thales-diagram {
+    height: 200px;
+  }
+  
+  .formula {
+    font-size: 1.5rem;
+  }
+  
+  .results-actions {
+    flex-direction: column;
+  }
+  
+  .score-total {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thales-diagram {
+    height: 150px;
+  }
+  
+  .labels {
+    display: none;
+  }
+  
+  [class^="point-"] {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+}
