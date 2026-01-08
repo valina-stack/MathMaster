@@ -11,7 +11,7 @@ function HomePage() {
     { name: '4ème', color: '#9C27B0', topics: ['Puissances', 'Pythagore', 'Calcul'] },
     { name: '3ème', color: '#FF9800', topics: ['Thalès', 'Trigonométrie', 'Probabilités'] },
     { name: '2nde', color: '#F44336', topics: ['Fonctions', 'Vecteurs', 'Statistiques'] },
-    { name: '1ère Spe', color: '#3F51B5', topics: ['Dérivation', 'Suites', 'Probabilités'] },
+    { name: '1ère Spé', color: '#3F51B5', topics: ['Dérivation', 'Suites', 'Probabilités','Dérivation'] },
     { name: 'Terminale Expert', color: '#607D8B', topics: ['Limites', 'Intégrales', 'Complexes'] },
 	{ name: 'Terminale Compl.', color: '#607D8B', topics: ['Limites', 'Intégrales', 'Complexes'] },
   ];
@@ -72,56 +72,11 @@ function HomePage() {
               {grade.name === '3ème' && (
                 <div className="demo-badge">Thalès disponible</div>
               )}
+              {grade.name === '1ère Spé' && (
+                <div className="demo-badge">Derivation disponible</div>
+              )}			  
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Leçons disponibles */}
-      <section className="available-lessons">
-        <h2>✨ Leçons disponibles</h2>
-        <div className="lessons-grid">
-          {/* Leçon Pythagore */}
-          <div className="lesson-card" onClick={() => navigate('/lessons/pythagore')}>
-            <div className="lesson-header">
-              <span className="lesson-grade-badge">4ème</span>
-              <span className="lesson-duration">45 min</span>
-            </div>
-            <div className="lesson-icon">📐</div>
-            <h3 className="lesson-title">Théorème de Pythagore</h3>
-            <p className="lesson-description">
-              Calcule les longueurs dans un triangle rectangle avec des exercices interactifs.
-            </p>
-            <div className="lesson-features">
-              <span className="feature-tag">🎥 Vidéos</span>
-              <span className="feature-tag">✏️ Exercices</span>
-              <span className="feature-tag">🎯 Quiz</span>
-            </div>
-            <button className="lesson-button">
-              ▶️ Commencer
-            </button>
-          </div>
-
-          {/* Leçon Thalès */}
-          <div className="lesson-card" onClick={() => navigate('/lessons/thales')}>
-            <div className="lesson-header">
-              <span className="lesson-grade-badge">3ème</span>
-              <span className="lesson-duration">60 min</span>
-            </div>
-            <div className="lesson-icon">📏</div>
-            <h3 className="lesson-title">Théorème de Thalès</h3>
-            <p className="lesson-description">
-              Maîtrise la proportionnalité dans les triangles avec des diagrammes interactifs.
-            </p>
-            <div className="lesson-features">
-              <span className="feature-tag">📐 Diagrammes</span>
-              <span className="feature-tag">✏️ Exercices</span>
-              <span className="feature-tag">🎯 Quiz</span>
-            </div>
-            <button className="lesson-button">
-              ▶️ Commencer
-            </button>
-          </div>
         </div>
       </section>
 
