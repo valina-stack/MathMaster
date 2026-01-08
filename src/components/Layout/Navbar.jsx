@@ -9,6 +9,7 @@ const Navbar = () => {
     { path: '/', label: 'Accueil', icon: '🏠' },
     { path: '/lessons/pythagore', label: 'Pythagore', icon: '📐' },
     { path: '/lessons/thales', label: 'Thalès', icon: '📏' },
+    { path: '/lessons/derivation', label: 'Dérivation', icon: '📈' }, // <-- NOUVELLE LIGNE
     { path: '/progress', label: 'Progression', icon: '📊' },
     { path: '/exercises', label: 'Exercices', icon: '✏️' },
   ];

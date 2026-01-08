@@ -610,3 +610,138 @@
     padding: 25px;
   }
 }
+
+/* ============================= */
+/* SECTION PREMIÈRE - PAGE ACCUEIL */
+/* ============================= */
+
+.premiere-section {
+  margin: 60px 0;
+  padding: 50px;
+  background: linear-gradient(135deg, #f8f5fc 0%, #f0e7f7 100%);
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.premiere-section::before {
+  content: '1ère';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(156, 39, 176, 0.1);
+  z-index: 0;
+}
+
+.premiere-section h2 {
+  color: #9C27B0;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.premiere-subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.premiere-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.premiere-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.premiere-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  border-color: #9C27B0;
+  box-shadow: 0 20px 40px rgba(156, 39, 176, 0.2);
+}
+
+.premiere-card-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.premiere-card-title {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.premiere-card-desc {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  min-height: 80px;
+}
+
+.premiere-card-meta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.premiere-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.premiere-start-button {
+  background: linear-gradient(135deg, #9C27B0, #673AB7);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.premiere-start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(156, 39, 176, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .premiere-section {
+    padding: 30px 20px;
+  }
+  
+  .premiere-section::before {
+    font-size: 5rem;
+  }
+  
+  .premiere-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

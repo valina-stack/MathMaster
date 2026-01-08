@@ -185,6 +185,34 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Section Première */}
+      <section className="premiere-section">
+        <h2>🎯 Première - Spécialité Mathématiques</h2>
+        <p className="premiere-subtitle">
+          Programme complet de Première avec exercices interactifs et quiz
+        </p>
+  
+        <div className="premiere-grid">
+          <div className="premiere-card" onClick={() => navigate('/lessons/derivation')}>
+            <span className="premiere-card-icon">📈</span>
+            <h3 className="premiere-card-title">Dérivation</h3>
+            <p className="premiere-card-desc">
+              Nombre dérivé, équation de tangente, étude des variations de fonctions.
+            </p>
+            <div className="premiere-card-meta">
+              <span className="premiere-meta-item">⏱️ 75 min</span>
+              <span className="premiere-meta-item">🎯 Avancé</span>
+              <span className="premiere-meta-item">✏️ 5 exercices</span>
+            </div>
+            <button className="premiere-start-button">
+              Commencer la leçon
+            </button>
+          </div>
+    
+          {/* Ajoutez d'autres cartes ici */}
+        </div>
+      </section>
+	  
       {/* Footer */}
       <footer className="app-footer">
         <p>© 2024 MathMaster - Application éducative de mathématiques</p>
@@ -194,6 +222,9 @@ function HomePage() {
           <a href="/lessons/thales" style={{color: '#2196F3', marginLeft: '10px'}}>Thalès</a>
         </p>
       </footer>
+	  
+  
+	  
     </div>
   );
 }

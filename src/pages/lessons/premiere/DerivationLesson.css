@@ -1,0 +1,302 @@
+/* DerivationLesson.css - Styles pour la leçon Dérivation */
+
+.derivation-lesson {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9f0fc 0%, #f3e5f5 100%);
+  padding-bottom: 50px;
+}
+
+/* Header spécifique Première */
+.lesson-header.premiere-header {
+  background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
+  color: white;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(156, 39, 176, 0.3);
+}
+
+.grade-badge.premiere {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Conteneur principal */
+.lesson-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Sidebar */
+.lesson-sidebar {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(156, 39, 176, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 30px;
+}
+
+.objectives-card h3 {
+  color: #9C27B0;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.objectives-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.objectives-card li {
+  padding: 12px 0;
+  color: #555;
+  position: relative;
+  padding-left: 30px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.objectives-card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #9C27B0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Contenu principal */
+.lesson-content {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(156, 39, 176, 0.1);
+}
+
+.step-content h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #E1BEE7;
+}
+
+/* Théorie */
+.theory-content p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.formula-box {
+  background: linear-gradient(135deg, #f9f0fc, #f3e5f5);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px 0;
+  border-left: 5px solid #9C27B0;
+}
+
+.formula {
+  font-family: 'Cambria Math', 'Latin Modern Math', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 2px dashed #9C27B0;
+  color: #333;
+}
+
+/* Table des dérivées */
+.formulas-table {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin: 30px 0;
+}
+
+.formulas-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.formulas-table th {
+  background: #9C27B0;
+  color: white;
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.formulas-table td {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.formulas-table tr:hover {
+  background: #f9f0fc;
+}
+
+.derivative {
+  color: #9C27B0;
+  font-weight: 600;
+  font-family: 'Cambria Math', serif;
+  font-size: 1.2rem;
+}
+
+/* Exercices */
+.exercise-content {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px 0;
+  border: 2px solid #E1BEE7;
+}
+
+.exercise-options {
+  display: grid;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.option-button {
+  padding: 20px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.option-button:hover {
+  border-color: #9C27B0;
+  background: #f9f0fc;
+  transform: translateX(5px);
+}
+
+.option-button.selected {
+  background: #9C27B0;
+  color: white;
+  border-color: #9C27B0;
+  font-weight: 600;
+}
+
+/* Feedback */
+.feedback {
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 25px;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.correct {
+  background: #e8f5e9;
+  color: #4CAF50;
+  border-left: 5px solid #4CAF50;
+}
+
+.incorrect {
+  background: #ffebee;
+  color: #F44336;
+  border-left: 5px solid #F44336;
+}
+
+/* Navigation */
+.step-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.step-navigation button {
+  padding: 15px 35px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.step-navigation button:first-child {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.step-navigation button:last-child {
+  background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+  color: white;
+}
+
+.step-navigation button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.step-navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .lesson-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .lesson-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-content {
+    padding: 25px;
+  }
+  
+  .formula {
+    font-size: 1.8rem;
+    padding: 20px;
+  }
+  
+  .step-navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .step-navigation button {
+    width: 100%;
+  }
+}
