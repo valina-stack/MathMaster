@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
 import HomePage from './pages/HomePage';
-import PythagoreLesson from './pages/lessons/PythagoreLesson';
-import ThalesLesson from './pages/lessons/ThalesLesson';
-import DerivationLesson from './pages/lessons/premiere/DerivationLesson'; // <-- AJOUTEZ CETTE LIGNE
+import PythagoreLesson from './pages/lessons/quatrieme/PythagoreLesson';
+import ThalesLesson from './pages/lessons/troisieme/ThalesLesson';
+import DerivationLesson from './pages/lessons/premiere/DerivationLesson'; 
 import TrigonometryLesson from './pages/lessons/premiere/TrigonometryLesson';
 import ProgressPage from './pages/ProgressPage';
 import ExercisesPage from './pages/ExercisesPage';
-import PremiereMenu from './pages/PremiereMenu';
+import PremiereSpe from './pages/PremiereMenu';
 import './App.css';
 
 function App() {
@@ -24,8 +24,7 @@ function App() {
             <Route path="/lessons/thales" element={<ThalesLesson />} />
             <Route path="/lessons/derivation" element={<DerivationLesson />} />
             <Route path="/lessons/trigonometry" element={<TrigonometryLesson />} />
-            {/* AJOUTEZ CETTE LIGNE : */}
-            <Route path="/premiere" element={<PremiereMenu />} />
+            <Route path="/premiere" element={<PremiereSpe />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/exercises" element={<ExercisesPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />

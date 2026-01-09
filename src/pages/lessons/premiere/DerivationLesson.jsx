@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './DerivationLesson.css';
+import '../lessonStyles.css';
 
 const DerivationLesson = () => {
   const navigate = useNavigate();

@@ -1,0 +1,225 @@
+/* lessonStyles.css - Styles partagés pour toutes les leçons */
+
+/* Conteneur principal pour toutes les leçons */
+.lesson-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Styles de base pour le contenu des leçons */
+.lesson-content {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Styles pour les formules mathématiques */
+.math-formula {
+    font-family: 'Cambria Math', 'Latin Modern Math', serif;
+    font-size: 1.1em;
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 3px solid #4a6fa5;
+    margin: 15px 0;
+}
+
+/* Styles pour les exemples */
+.example {
+    background: #e8f4ff;
+    border-left: 4px solid #3498db;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.example h4 {
+    margin-top: 0;
+    color: #2980b9;
+}
+
+/* Styles pour les définitions */
+.definition {
+    background: #fff8e1;
+    border-left: 4px solid #ff9800;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.definition h4 {
+    margin-top: 0;
+    color: #ff6f00;
+}
+
+/* Styles pour les théorèmes */
+.theorem {
+    background: #f0f7ff;
+    border: 2px solid #4a6fa5;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.theorem h4 {
+    margin-top: 0;
+    color: #4a6fa5;
+}
+
+/* Styles pour les preuves */
+.proof {
+    background: #f9f9f9;
+    border-left: 3px solid #95a5a6;
+    padding: 15px;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+/* Styles pour les tableaux */
+.math-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.math-table th {
+    background: #4a6fa5;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.math-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.math-table tr:last-child td {
+    border-bottom: none;
+}
+
+.math-table tr:hover {
+    background: #f8f9fa;
+}
+
+/* Styles pour les graphiques et diagrammes */
+.diagram-container {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px dashed #d0d7e7;
+    text-align: center;
+}
+
+/* Styles pour les exercices */
+.exercise {
+    background: white;
+    border: 2px solid #f0f4f8;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 0;
+    transition: all 0.3s ease;
+}
+
+.exercise:hover {
+    border-color: #4a6fa5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.exercise h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.exercise .difficulty {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.exercise .difficulty.easy {
+    background: #d4edda;
+    color: #155724;
+}
+
+.exercise .difficulty.medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.exercise .difficulty.hard {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Styles pour les solutions */
+.solution {
+    background: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.solution.show {
+    display: block;
+}
+
+.solution-toggle {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* Styles pour les notations importantes */
+.important {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+/* Styles pour les remarques */
+.remark {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 15px;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .lesson-container {
+        padding: 10px;
+    }
+    
+    .math-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .exercise, .theorem, .example {
+        padding: 15px;
+    }
+}
