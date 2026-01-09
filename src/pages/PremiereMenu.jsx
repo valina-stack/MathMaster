@@ -3,59 +3,59 @@ import { Link } from 'react-router-dom';
 import './PremiereMenu.css';
 
 const PremiereMenu = () => {
-  const premiereLessons = [
-    {
-      title: 'Trigonométrie',
-      path: '/lessons/trigonometry',
-      icon: '📐',
-      description: 'Cercle trigonométrique, cos, sin, tan, formules',
-      color: '#4CAF50'
-    },
-    {
-      title: 'Dérivation',
-      path: '/lessons/derivation',
-      icon: '📈',
-      description: 'Nombre dérivé, tangente, variations',
-      color: '#2196F3'
-    },
-    {
-      title: 'Suites',
-      path: '#', // À créer plus tard
-      icon: '🔢',
-      description: 'Suites arithmétiques et géométriques',
-      color: '#9C27B0',
-      comingSoon: true
-    }
-  ];
+    const lessons = [
+        {
+            id: 'derivation',
+            title: 'Dérivation',
+            description: 'Notion de dérivée, calcul des dérivées, applications',
+            path: '/lessons/derivation',
+            icon: '∫'
+        },
+        {
+            id: 'trigonometry',
+            title: 'Trigonométrie',
+            description: 'Cercle trigonométrique, formules, équations trigonométriques',
+            path: '/lessons/trigonometry',
+            icon: 'θ'
+        }
+        // Add more lessons here as you create them
+    ];
 
-  return (
-    <div className="premiere-menu">
-      <header className="premiere-header">
-        <h1>📚 Première Spécialité Mathématiques</h1>
-        <p>Choisis une leçon pour commencer</p>
-      </header>
+    return (
+        <div className="premiere-menu">
+            <div className="menu-header">
+                <h1>1ère Spécialité Mathématiques</h1>
+                <p className="subtitle">Sélectionnez une leçon à étudier</p>
+            </div>
 
-      <div className="lessons-grid">
-        {premiereLessons.map((lesson, index) => (
-          <div key={index} className="lesson-card" style={{ borderTopColor: lesson.color }}>
-            <div className="lesson-icon">{lesson.icon}</div>
-            <h3>{lesson.title}</h3>
-            <p>{lesson.description}</p>
-            
-            {lesson.comingSoon ? (
-              <button className="coming-soon-btn" disabled>
-                Bientôt disponible
-              </button>
-            ) : (
-              <Link to={lesson.path} className="start-lesson-btn">
-                Commencer la leçon →
-              </Link>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+            <div className="lessons-grid">
+                {lessons.map((lesson) => (
+                    <Link 
+                        key={lesson.id}
+                        to={lesson.path}
+                        className="lesson-card"
+                    >
+                        <div className="lesson-icon">
+                            {lesson.icon}
+                        </div>
+                        <div className="lesson-content">
+                            <h3>{lesson.title}</h3>
+                            <p>{lesson.description}</p>
+                            <span className="start-lesson">
+                                Commencer la leçon →
+                            </span>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+
+            <div className="menu-actions">
+                <Link to="/" className="back-button">
+                    ← Retour à l'accueil
+                </Link>
+            </div>
+        </div>
+    );
 };
 
 export default PremiereMenu;

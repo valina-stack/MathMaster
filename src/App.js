@@ -25,7 +25,7 @@ function App() {
             <Route path="/lessons/derivation" element={<DerivationLesson />} />
             <Route path="/lessons/trigonometry" element={<TrigonometryLesson />} />
             {/* AJOUTEZ CETTE LIGNE : */}
-            <Route path="/cours/premiere" element={<PremiereMenu />} />
+            <Route path="/premiere" element={<PremiereMenu />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/exercises" element={<ExercisesPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
